@@ -1,0 +1,35 @@
+app-new-item {
+  height: 100%;
+  .container {
+    height: 100%;
+  }
+
+  .mat-toolbar-single-row {
+    justify-content: center;
+  }
+
+  .mat-card {
+    padding: 0;
+    .mat-card-content {
+      padding: 20px 60px;
+    }
+  }
+
+  .pt-20 {
+    padding-top: 20px;
+  }
+
+  opacity-50 {
+    opacity: 0.5;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

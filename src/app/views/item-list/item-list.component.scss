@@ -1,0 +1,61 @@
+app-item-list {
+  height: 100%;
+  /* Structure */
+  .container {
+    height: 100%;
+  }
+
+  .mat-toolbar-single-row {
+    justify-content: center;
+    margin-bottom: 0 !important;
+  }
+
+  mat-header-row.mat-header-row {
+    text-align: center;
+  }
+
+  .header {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    font-size: 20px;
+  }
+  mat-table {
+    margin: 0 !important;
+  }
+
+  .table {
+    overflow: auto;
+    min-height: 300px;
+    height: 100%;
+  }
+
+  .loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mat-cell {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Column Widths */
+  .mat-column-email {
+    max-width: 184px;
+    text-align: left !important;
+  }
+
+  .mat-column-result {
+    max-width: 124px;
+  }
+}

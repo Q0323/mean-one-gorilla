@@ -1,0 +1,52 @@
+<div class="container mat-elevation-z8">
+  <div fxLayout="column" fxLayoutAlign="center stretch" class="container">
+
+    <mat-toolbar>Listado de Items</mat-toolbar>
+
+    <!--
+    <div class="loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner></mat-spinner>
+    </div> -->
+
+    <mat-table #table [dataSource]="dataSource" class="table">
+
+      <ng-container matColumnDef="value">
+        <mat-header-cell *matHeaderCellDef>Valor</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.value }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="values">
+        <mat-header-cell *matHeaderCellDef>Valores</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.values }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="result">
+        <mat-header-cell *matHeaderCellDef>Resultado</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.result }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Nombre</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row?.name }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.email }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="createdAt">
+        <mat-header-cell *matHeaderCellDef>
+          Item
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row">Creado {{ row.createdAt | amLocale: 'es' | amTimeAgo }}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+  </div>
+
+
+</div>

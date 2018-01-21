@@ -1,0 +1,56 @@
+<div fxLayout fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px" fxLayoutGap.xs="0" class="container">
+  <div fxLayout fxLayoutAlign="space-around center">
+    <mat-card>
+      <mat-toolbar>Nuevo Item</mat-toolbar>
+      <mat-card-content>
+        <form novalidate autocomplete="off" class="pt-20" [class.opacity-50]="loading" [formGroup]="newItemForm" (ngSubmit)="sendForm(newItemForm.value)">
+          <div fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="30px" fxLayoutGap.xs="0">
+            <mat-form-field fxFlex>
+              <input matInput formControlName="name" placeholder="Nombre">
+              <mat-error *ngIf="newItemForm.get('name').hasError('required')">
+                Este campo es requerido
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field fxFlex>
+              <input matInput formControlName="email" placeholder="Email">
+              <mat-error *ngIf="newItemForm.get('email').hasError('required')">
+                Este campo es requerido
+              </mat-error>
+              <mat-error *ngIf="newItemForm.get('email').hasError('pattern')">
+                El email no posee un formato valido
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="30px" fxLayoutGap.xs="0">
+            <mat-form-field fxFlex>
+              <input matInput type="number" formControlName="firstValue" placeholder="Ingrese un número">
+              <mat-error *ngIf="newItemForm.get('firstValue').hasError('required')">
+                Este campo es requerido
+              </mat-error>
+              <mat-error *ngIf="newItemForm.get('firstValue').hasError('pattern')">
+                Solo son permitidos numeros enteros
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field fxFlex>
+              <input matInput formControlName="multipleValues" placeholder="Ingrese números separados por coma">
+              <mat-error *ngIf="newItemForm.get('multipleValues').hasError('required')">
+                Este campo es requerido
+              </mat-error>
+              <mat-error *ngIf="newItemForm.get('multipleValues').hasError('pattern')">
+                Solo son permitidos numeros enteros separados por coma
+              </mat-error>
+              <mat-hint>Ejemplo: 20,30,10,50</mat-hint>
+            </mat-form-field>
+          </div>
+          <div fxLayout fxLayoutAlign="center center" class="pt-20">
+            <button type="submit" mat-raised-button [disabled]="newItemForm.invalid || loading">
+              <span *ngIf="!loading">Crear</span>
+              <span *ngIf="loading">Enviando...</span>
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
