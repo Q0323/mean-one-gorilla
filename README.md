@@ -1,27 +1,22 @@
-# MeanGorrilla
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+# MEAN Stack mini Project
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Environment
 
-## Code scaffolding
+MongoDB shell version 3.4.10
+Angular CLI: 1.6.5
+Node: 8.9.4
+Angular: 5.2.1
+Express: 4.16.2
+Mongoose: 5.0.1
+Yarn: 1.3.2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Client / Server
+Run `npm start`. The app and server are going to start at the same time with concurrently librarie config.
 
-## Build
+## Client
+Run `npm run start:client` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Server
+Run `npm run start:server`. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files with nodemon.
